@@ -1,7 +1,7 @@
-import dash_bootstrap_components as dbc
-from dash import dcc, html
-import pandas as pd
 from components import helper_functions as hf
+from dash import dcc, html
+import dash_bootstrap_components as dbc
+import pandas as pd
 
 
 # Cabeçalho
