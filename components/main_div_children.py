@@ -1,33 +1,19 @@
-from components import helper_functions as hf
+from helper_functions import helper_functions as hf
 from dash import dcc, html
 import dash_bootstrap_components as dbc
 import pandas as pd
 
 
 # Cabeçalho
-class_h1 = "text-center h1"
-class_h2 = "text-center h2"
 class_h3 = "text-center h3"
 
-# Conteúdo
-class_p1 = "text-p"
-class_l1 = "my-legend"
 # Label
 class_label1 = "label1"
-class_label2 = "label2"
-
-# Botão
-class_button = "button"
 
 # Card
 class_card = "card"
-class_card2 = "card2"
-class_card_header = "card-header"
-class_card_title = "card-title"
-class_card_text = "card-title"
 
 # Divs e Cols
-class_div = "div_highlight"
 class_row = "row_highlight"
 class_col = "col_highlight"
 
@@ -36,12 +22,6 @@ class_graph = "graph-container"
 
 # Dropdown
 class_dropdown = "dropdown"
-
-# Date pick
-class_datepickerrange = "form-control"
-
-# Checklist
-class_checklist = "form-check-input"
 
 # Dados de exemplo
 # df = pd.read_csv('ProdOps\database\Data.csv')
@@ -118,7 +98,7 @@ checklist_filter = dbc.Card(
                      "value": "opcao3"}
                 ],
                 value=["opcao1"],
-                className=class_checklist,
+                className="form-check-input",
 
             )
         )
@@ -138,7 +118,7 @@ period_filter = dbc.Card(
             dcc.DatePickerRange(
                 start_date="2023-01-01",
                 end_date="2023-12-31",
-                className=class_datepickerrange,
+                className="form-control",
 
             )
         )
@@ -155,13 +135,13 @@ indicators = dbc.Col(
                 dbc.Col(
                     html.H1(
                         "Desempenho",
-                        className=class_h1,
+                        className="text-center h1",
                     ),
                     width=10
                 ),
                 dbc.Col(
                     html.P(f"Última atualização: {pd.to_datetime('today').strftime('%Y-%m-%d')}",
-                           className=class_p1,
+                           className="text-p",
                            ),
                     width=2
                 )
@@ -260,7 +240,7 @@ main_div_chidren = [
                     dbc.Button(
                         "Atualizar",
                         id="Atualizar",
-                        className=class_button,
+                        className="button",
                     ),
                     dropdown_filter,
                     checklist_filter,
