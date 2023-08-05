@@ -8,6 +8,9 @@ main_div = [
         fluid=True,
         children=main_div_chidren,
         className="header",
+        style={
+            'width': '100%',
+        }
     ),
 ]
 
@@ -15,5 +18,8 @@ main_div = [
 layout = dbc.Container(
     fluid=True,
     children=main_div,
-    style={'font-family': 'Arial'}
+    style={
+        'font-family': 'Arial',
+        'padding': '0',
+    }
 )
