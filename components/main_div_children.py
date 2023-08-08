@@ -87,7 +87,7 @@ checklist_filter = dbc.Card(
                     )
         ),
         dbc.CardBody(
-            dbc.Checklist(
+            dbc.RadioItems(
                 options=[
                     {"label": "Opção 1",
                      "value": "opcao1"},
@@ -96,14 +96,11 @@ checklist_filter = dbc.Card(
                     {"label": "Opção 3",
                      "value": "opcao3"}
                 ],
-                value=["opcao1"],
-                className="form-check-input",
-
+                value="opcao1"
             )
         )
     ],
     className=class_card,
-
 )
 
 period_filter = dbc.Card(
