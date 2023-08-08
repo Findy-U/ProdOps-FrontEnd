@@ -153,8 +153,6 @@
 .information-row {
   padding: 5px;
   margin: 0;
-  background-color: #444444;
-  border: 4px solid #008000;
   border-radius: 5px;
   display: flex;
   justify-content: center;
