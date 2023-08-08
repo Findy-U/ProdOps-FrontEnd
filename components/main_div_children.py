@@ -137,7 +137,7 @@ indicators = dbc.Col(
                 ),
                 dbc.Col(
                     hf.create_card(
-                        "WIP (Work in Progress)", hf.wip(DF_ind), ""),
+                        "Work in Progress", hf.wip(DF_ind), ""),
                     width=3
                 ),
                 dbc.Col(
