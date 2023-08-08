@@ -102,26 +102,6 @@ period_filter = dbc.Card(
 
 indicators = dbc.Col(
     [
-        # Cabeçalho #
-        dbc.Row(
-            [
-                dbc.Col(
-                    html.H1(
-                        "Desempenho",
-                        className="text-center h1",
-                    ),
-                    width=10
-                ),
-                dbc.Col(
-                    html.P(f"Última atualização: {pd.to_datetime('today').strftime('%Y-%m-%d')}",
-                           className="text-p",
-                           ),
-                    width=2
-                )
-            ]
-
-        ),
-
         # Valores únicos #
         dbc.Row(
             [
