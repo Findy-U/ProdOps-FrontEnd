@@ -1,3 +1,4 @@
+from .checklist import checklist_filter
 from helper_functions import helper_functions as hf
 from dash import dcc, html
 import dash_bootstrap_components as dbc
@@ -79,30 +80,6 @@ dropdown_filter = dbc.Card(
     className=class_card,
 )
 
-checklist_filter = dbc.Card(
-    [
-        dbc.CardHeader(
-            html.H3("Opções",
-                    className=class_h3,
-                    )
-        ),
-        dbc.CardBody(
-            dbc.RadioItems(
-                options=[
-                    {"label": "Opção 1",
-                     "value": "opcao1"},
-                    {"label": "Opção 2",
-                     "value": "opcao2"},
-                    {"label": "Opção 3",
-                     "value": "opcao3"}
-                ],
-                value="opcao1"
-            )
-        )
-    ],
-    className=class_card,
-)
-
 period_filter = dbc.Card(
     [
         dbc.CardHeader(
@@ -165,11 +142,11 @@ indicators = dbc.Col(
                 ),
                 dbc.Col(
                     hf.create_card(
-                        "Stale Work", hf.stale_work(DF_ind), "↑"),
+                        "Stale Work", hf.stale_work(DF_ind), ""),
                     width=3
-                ),
+                )
             ],
-            className=class_row,
+            className="information-row",
             justify="center",
             align="center",
         ),
