@@ -30,15 +30,6 @@
   font-family: "Roboto", sans-serif;
 }
 
-.text-center h3 {
-  text-align: center;
-  color: #008000;
-  font-size: 1.8vw;
-  text-decoration: underline;
-  padding: 0.5vw;
-  font-family: "Roboto", sans-serif;
-}
-
 .lead.text-center {
   text-align: center;
   color: #008000;
@@ -56,7 +47,7 @@
 
 .label1 {
   color: #008000;
-  font-size: 1.2vw;
+  font-size: 1.5vw;
   font-family: "Roboto", sans-serif;
 }
 
@@ -106,6 +97,14 @@
   align-items: center;
 }
 
+.card h3 {
+  text-align: center;
+  color: #008000;
+  font-size: 1.8vw;
+  padding: 0.5vw;
+  font-family: "Roboto", sans-serif;
+}
+
 .card-header {
   background-color: #444444;
   color: #008000;
@@ -139,7 +138,7 @@
   text-align: center;
 }
 
-.row_highlight {
+.row-highlight {
   margin-top: 10px;
   background-color: #444444;
   border: 4px solid #008000;
@@ -151,7 +150,7 @@
   text-align: center;
 }
 
-.col_highlight {
+.col-highlight {
   padding: 10px;
   margin-bottom: 10px;
   background-color: #333333;

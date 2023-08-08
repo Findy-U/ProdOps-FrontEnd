@@ -5,7 +5,7 @@ import pandas as pd
 
 
 # Cabeçalho
-class_h3 = "text-center h3"
+class_h3 = "text-center"
 
 # Label
 class_label1 = "label1"
@@ -14,8 +14,8 @@ class_label1 = "label1"
 class_card = "card"
 
 # Divs e Cols
-class_row = "row_highlight"
-class_col = "col_highlight"
+class_row = "row-highlight"
+class_col = "col-highlight"
 
 # Graph
 class_graph = "graph-container"
@@ -43,9 +43,8 @@ DF_ind_pessoal = hf.df_ind_pessoal()
 dropdown_filter = dbc.Card(
     [
         dbc.CardHeader(
-            html.H3("Categorias",
-                    className=class_h3,
-                    )
+            html.H3("Categorias"),
+            style={"border-radius": "5px"}
         ),
         dbc.CardBody(
             [
