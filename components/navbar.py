@@ -9,7 +9,7 @@ img = html.Img(
     })
 
 text = html.P(
-    children="DashBoard",
+    children="Dashboard",
     style={
         "color": "white",
         "align-self": "center",
@@ -21,7 +21,7 @@ navbar = dbc.Navbar([
     img,
     text
 ],
-    color="#333333",
+    color="#1e1e1e",
     dark=True,
     style={
         "border-bottom": "4px solid #03887d",

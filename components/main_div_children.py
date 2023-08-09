@@ -4,21 +4,6 @@ from dash import dcc, html
 import dash_bootstrap_components as dbc
 
 
-# Cabeçalho
-class_h3 = "text-center"
-
-# Label
-class_label1 = "label1"
-
-# Card
-class_card = "card"
-
-# Graph
-class_graph = "graph-container"
-
-# Dropdown
-class_dropdown = "dropdown"
-
 # Dados de exemplo
 # df = pd.read_csv('ProdOps\database\Data.csv')
 df = hf.extract_data()
@@ -45,25 +30,25 @@ dropdown_filter = dbc.Card(
         dbc.CardBody(
             [
                 html.Label("Categoria 1",
-                           className=class_label1,
+                           className="label1",
                            ),
                 html.Div(
                     dcc.Dropdown(
                         id="dropdown-cat1",
                         clearable=False,
-                        className=class_dropdown,
+                        className="dropdown",
                         persistence=True,
                         persistence_type="session",
                         multi=True,
                     )
                 ),
                 html.Label("Categoria 2",
-                           className=class_label1),
+                           className="label1"),
                 html.Div(
                     dcc.Dropdown(
                         id="dropdown-cat2",
                         clearable=False,
-                        className=class_dropdown,
+                        className="dropdown",
                         persistence=True,
                         persistence_type="session",
                         multi=True,
@@ -72,14 +57,14 @@ dropdown_filter = dbc.Card(
             ]
         )
     ],
-    className=class_card,
+    className="card",
 )
 
 period_filter = dbc.Card(
     [
         dbc.CardHeader(
             html.H3("Período",
-                    className=class_h3,
+                    className="text-center",
                     )
         ),
         dbc.CardBody(
@@ -91,9 +76,12 @@ period_filter = dbc.Card(
             )
         )
     ],
-    className=class_card,
+    className="card",
 
 )
+
+# Graph
+class_graph = "graph-container"
 
 indicators = dbc.Col(
     [
@@ -179,26 +167,23 @@ indicators = dbc.Col(
     width=10
 )
 
-main_div_chidren = [
-    dbc.Row(
-        [
-            # Sidebar #
-            dbc.Col(
-                [
-                    dbc.Button(
-                        "Atualizar",
-                        id="Atualizar",
-                        className="button",
-                    ),
-                    dropdown_filter,
-                    checklist_filter,
-                    period_filter
-                ],
-                className="col-highlight-left",
-                width=2
-            ),
-            indicators
-        ],
-        className="row-highlight"
-    )
-]
+# Sidebar #
+left_column = dbc.Col(
+    [
+        dbc.Button(
+            "Atualizar",
+            id="Atualizar",
+            className="button",
+        ),
+        dropdown_filter,
+        checklist_filter,
+        period_filter
+    ],
+    className="col-highlight-left",
+    width=2
+)
+
+main_div_chidren = dbc.Row(
+    [left_column, indicators],
+    className="row-highlight"
+)
