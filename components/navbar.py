@@ -24,6 +24,6 @@ navbar = dbc.Navbar([
     color="#333333",
     dark=True,
     style={
-        "border-bottom": "4px solid #008000",
+        "border-bottom": "4px solid #03887d",
         "padding": "9px"}
 )
