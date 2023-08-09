@@ -1,8 +1,9 @@
 import dash_bootstrap_components as dbc
 from .main_div_children import main_div_chidren
-
+from .header import navbar
 
 main_div = [
+    navbar,
     # Dashboard #
     dbc.Container(
         fluid=True,

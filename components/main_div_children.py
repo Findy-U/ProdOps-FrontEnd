@@ -2,7 +2,6 @@ from .checklist import checklist_filter
 from helper_functions import helper_functions as hf
 from dash import dcc, html
 import dash_bootstrap_components as dbc
-import pandas as pd
 
 
 # Cabeçalho
