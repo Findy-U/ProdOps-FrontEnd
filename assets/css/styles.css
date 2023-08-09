@@ -164,6 +164,8 @@
   justify-content: space-between;
   flex-direction: column;
   padding: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
   background-color: #333333;
   border-right: 4px solid #008000;
   font-family: "Roboto", sans-serif;

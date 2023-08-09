@@ -12,7 +12,7 @@ app = Dash(
 )
 
 app.layout = layout
-
+app.title = "Findy Dashboard"
 
 if __name__ == '__main__':
     app.run_server(debug=True)
