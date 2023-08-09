@@ -8,7 +8,7 @@ css_path = os.path.join(os.path.dirname(__file__), 'assets/css/styles.css')
 
 app = Dash(
     __name__,
-    external_stylesheets=[dbc.themes.BOOTSTRAP, css_path]
+    external_stylesheets=[dbc.themes.BOOTSTRAP, dbc.icons.BOOTSTRAP, css_path]
 )
 
 app.layout = layout
