@@ -13,10 +13,6 @@ class_label1 = "label1"
 # Card
 class_card = "card"
 
-# Divs e Cols
-class_row = "row-highlight"
-class_col = "col-highlight"
-
 # Graph
 class_graph = "graph-container"
 
@@ -179,7 +175,7 @@ indicators = dbc.Col(
         )
 
     ],
-    className=class_col,
+    className="col-highlight-right",
     width=10
 )
 
@@ -198,11 +194,11 @@ main_div_chidren = [
                     checklist_filter,
                     period_filter
                 ],
-                className=class_col,
+                className="col-highlight-left",
                 width=2
             ),
             indicators
         ],
-        className=class_row
+        className="row-highlight"
     )
 ]
