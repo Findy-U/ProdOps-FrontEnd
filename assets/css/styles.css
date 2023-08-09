@@ -159,10 +159,10 @@
   text-align: center;
 }
 
-.col-highlight {
+.col-highlight-left {
   display: flex;
+  justify-content: space-between;
   flex-direction: column;
-  height: 100%;
   padding: 10px;
   background-color: #333333;
   border-right: 4px solid #008000;
@@ -170,6 +170,15 @@
   text-align: center;
 }
 
+.col-highlight-right {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: 10px;
+  background-color: #333333;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+}
 .graph-container {
   height: 400px;
   background-color: #222222;
