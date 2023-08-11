@@ -49,6 +49,6 @@ footer = html.Footer(
     style={
         "display": "flex",
         "align-items": "center",
-        "border-top": "4px solid #03887d",
+        "border-top": "4px solid #01A195",
         "padding": "9px"
     })
