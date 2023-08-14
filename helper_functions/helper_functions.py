@@ -42,7 +42,6 @@ def transform_data(df):
 
 
 def df_ind(df):
-
     # Determina o numero de dias que a card_id possui desde a data inicial do projeto
     df['age'] = round((pd.to_datetime('today') - df['created_at']).dt.days, 2)
 
@@ -91,9 +90,11 @@ def create_card(title, value, trend):
             html.P(trend, className="class_card_text"),
         ]
     )
-    card = dbc.Card([card_header, card_body], className="class_card")
 
-    return card
+    return dbc.Card(
+        [card_header, card_body],
+        className="class_card"
+    )
 
 # Indicadores
 
@@ -115,8 +116,8 @@ def wip(df):
 
 def stale_work(df):
     # Indica o trabalho pendente, contando o número de tarefas que estão atualmente pendentes.
-    if 'pending' in df['status'].values:
-        return df['status'].value_counts()['pending']
+    if 'open' or 'Maintenance' in df['status'].values:
+        return df['status'].value_counts()['open'] + df['status'].value_counts()['Maintenance']
     else:
         return 0
 
