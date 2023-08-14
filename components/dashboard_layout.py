@@ -3,19 +3,22 @@ from .main_div_children import main_div_chidren
 from .navbar import navbar
 from .footer import footer
 
-body = dbc.Container(
-    fluid=True,
-    children=main_div_chidren,
-    className="header",
-    style={
-        'width': '100%',
-    }
-)
+
+def body():
+    return dbc.Container(
+        fluid=True,
+        children=main_div_chidren,
+        className="header",
+        style={
+            'width': '100%',
+        }
+    )
+
 
 screen = [
-    navbar,
-    body,
-    footer
+    navbar(),
+    body(),
+    footer()
 ]
 
 

@@ -44,11 +44,12 @@ def icons_container() -> html.Div:
     )
 
 
-footer = html.Footer(
-    icons_container(),
-    style={
-        "display": "flex",
-        "align-items": "center",
-        "border-top": "4px solid #01A195",
-        "padding": "9px"
-    })
+def footer():
+    return html.Footer(
+        icons_container(),
+        style={
+            "display": "flex",
+            "align-items": "center",
+            "border-top": "4px solid #01A195",
+            "padding": "9px"
+        })
